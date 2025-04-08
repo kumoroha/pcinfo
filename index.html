@@ -7,25 +7,46 @@
 <script>
 const script = document.createElement('script');
 script.src = 'https://ipinfo.io?callback=callback';
-document.write(script);
+document.body.appendChild(script);
+document.body.removeChild(script);
 </script>
 <h1>このデバイスの情報</h1>
-<p>IPaddress:&nbsp;<script>
+<p>IPaddress:&nbsp;Print in console<script>
 function callback(data) {
- document.write(data.ip);
+ console.log(data.ip);
 }
 </script></p>
 <br>
 <p>userAgent:&nbsp;<script>
 document.write(window.navigator.userAgent);
+</script>&emsp;</p><a href="https://ipinfo.io">ipinfo.io</a>
+<br>
+<p>referer:&nbsp;<script>
+document.write(window.document.referer);
+</script></p>
+<br>
+<p>language:&nbsp;<script>
+document.write(window.navigator.language);
+</script></p>
+<br>
+<p>browser&nbsp;version:&nbsp;<script>
+document.write(window.navigator.appVersion);
+</script></p>
+<br>
+<p>browser&nbsp;name:&nbsp;<script>
+document.write(window.navigator.appName);
+</script></p>
+<br>
+<p>locationURL:&nbsp;<script>
+document.write(window.location.origin);
 </script></p>
 <br>
 <p>Screen&nbsp;height:&nbsp;<script>
-document.write(window.navigator.height);
+document.write(window.screen.height);
 </script></p>
 <br>
 <p>Screen&nbsp;width:&nbsp;<script>
-document.write(window.navigator.width);
+document.write(window.screen.width);
 </script></p>
 
 </body>
