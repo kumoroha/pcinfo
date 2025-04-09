@@ -1,3 +1,9 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 table{
 border-collapse: collapse;
 }
@@ -5,11 +11,4 @@ th, td{
 border: 1px solid #000000;
 padding: 5px;
 font-size: 1.2em;
-}
-
-.noto-sans-jp-<uniquifier> {
-  font-family: "Noto Sans JP", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
 }
